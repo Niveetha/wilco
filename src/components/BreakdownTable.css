@@ -1,0 +1,44 @@
+.breakdown {
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.breakdown-header {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 8px 12px;
+  font-family: var(--font-data);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+.breakdown-row {
+  display: flex;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+.breakdown-row:hover {
+  background: rgba(127, 127, 127, 0.05);
+}
+.bk-field {
+  padding: 6px 10px;
+  color: var(--muted);
+  min-width: 40px;
+  border-right: 1px solid var(--border);
+  font-size: 10px;
+}
+.bk-name {
+  padding: 6px 10px;
+  color: var(--text);
+  flex: 1;
+  border-right: 1px solid var(--border);
+  font-size: 11px;
+}
+.bk-value {
+  padding: 6px 10px;
+  color: var(--accent);
+  font-family: var(--font-data);
+  font-size: 12px;
+  min-width: 120px;
+  max-width: 50%;
+  word-break: break-word;
+}

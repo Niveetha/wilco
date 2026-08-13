@@ -1,0 +1,32 @@
+.decoder-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.decoder-input {
+  font-family: var(--font-data);
+  min-height: 160px;
+  resize: vertical;
+}
+
+.decoder-result {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeIn 0.2s ease;
+}
+
+.decoder-result-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.decoder-type-name {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 16px;
+}

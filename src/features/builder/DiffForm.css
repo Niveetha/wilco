@@ -1,0 +1,9 @@
+.diff-id-strip {
+  border-left-color: var(--muted);
+  opacity: 0.85;
+}
+.diff-amendments {
+  margin-top: 24px;
+  border-top: 2px solid var(--accent2);
+  padding-top: 16px;
+}

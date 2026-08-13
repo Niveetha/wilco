@@ -1,0 +1,56 @@
+.field-block {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  padding: 16px;
+  transition: border-color 0.2s;
+  animation: fadeIn 0.2s ease;
+}
+.field-block.mandatory {
+  border-left-color: var(--mandatory);
+}
+.field-block.optional {
+  border-left-color: var(--optional);
+}
+
+.field-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.field-num {
+  font-family: var(--font-data);
+  font-size: 11px;
+  color: var(--muted);
+  min-width: 28px;
+}
+.field-name {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.5px;
+  flex: 1;
+}
+
+.field-hint {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.15);
+  border-left: 2px solid var(--border);
+  line-height: 1.6;
+}
+.field-hint .eg {
+  color: var(--accent);
+}
+
+.fields-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

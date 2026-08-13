@@ -1,0 +1,101 @@
+.app-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+}
+
+.logo-block {
+  display: flex;
+  flex-direction: column;
+}
+.logo-title {
+  font-family: var(--font-data);
+  font-size: 18px;
+  color: var(--accent);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.logo-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  margin-top: 2px;
+}
+
+.tab-nav {
+  display: flex;
+  gap: 4px;
+}
+.tab-link {
+  font-family: var(--font-data);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid transparent;
+  transition: all 0.15s;
+}
+.tab-link:hover {
+  color: var(--accent);
+}
+.tab-link.active {
+  color: var(--accent);
+  border-color: var(--border);
+  background: rgba(0, 200, 255, 0.06);
+}
+
+.header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.live-badge {
+  font-family: var(--font-data);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--accent2);
+  border: 1px solid var(--accent2);
+  padding: 3px 8px;
+  animation: blink 2s infinite;
+}
+
+.app-main {
+  min-height: calc(100vh - 65px);
+}
+
+.page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+@media (max-width: 640px) {
+  .page,
+  .page-narrow {
+    padding: 14px;
+  }
+  .app-header {
+    padding: 10px 14px;
+  }
+  .tab-link {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+}

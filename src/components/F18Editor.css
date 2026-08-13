@@ -1,0 +1,59 @@
+.f18-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-bottom: 10px;
+}
+@media (max-width: 700px) {
+  .f18-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 420px) {
+  .f18-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.f18-toggle {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--font-data);
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 6px 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-align: center;
+}
+.f18-toggle.active {
+  background: rgba(0, 255, 157, 0.08);
+  border-color: var(--optional);
+  color: var(--optional);
+}
+
+.f18-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.f18-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 0.15s ease;
+}
+.f18-key {
+  font-family: var(--font-data);
+  font-size: 12px;
+  color: var(--optional);
+  min-width: 46px;
+  letter-spacing: 1px;
+}
+
+.f18-none {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
