@@ -406,6 +406,37 @@ export const F18_INDICATOR_HINTS: Record<string, string> = {
   RMK: 'Plain-language remarks',
 };
 
+export const F18_INDICATOR_LABELS: Record<string, string> = {
+  STS: 'Special handling reason',
+  PBN: 'RNAV / RNP capability',
+  NAV: 'Other navigation equipment',
+  COM: 'Other communication equipment',
+  DAT: 'Other data comm equipment',
+  SUR: 'Other surveillance equipment',
+  DEP: 'Departure aerodrome name/location',
+  DEST: 'Destination aerodrome name/location',
+  DOF: 'Date of flight',
+  REG: 'Aircraft registration',
+  EET: 'Accumulated en-route times',
+  SEL: 'SELCAL code',
+  TYP: 'Aircraft type(s), if not in Field 9',
+  CODE: 'Aircraft address (hex)',
+  DLE: 'En-route delay',
+  OPR: 'Operating agency',
+  ORGN: "Originator's AFTN address",
+  PER: 'Aircraft performance category',
+  ALTN: 'Destination alternate name(s)',
+  RALT: 'En-route alternate aerodrome(s)',
+  TALT: 'Take-off alternate aerodrome',
+  RIF: 'Revised route to new destination',
+  RMK: 'Plain-language remarks',
+};
+
+// Shown as one-tap quick-add chips before the user starts typing — the
+// handful of indicators that show up in the overwhelming majority of
+// real-world messages.
+export const F18_COMMON_INDICATORS = ['PBN', 'DOF', 'REG', 'SEL', 'RMK', 'EET'] as const;
+
 export const F18: FieldSpec<F18Value> = {
   id: 'F18',
   number: '18',

@@ -45,7 +45,7 @@ src/
     library/                # seeded + user-saved messages, copy/copy-all, localStorage store
 
   app/                    # header, tab nav, routes, About page
-  theme/                  # theme.css — TRON dark (default) + light "flight-plan paper" alt
+  theme/                  # theme.css — mission-console dark (default) + a light ops-room alt
 ```
 
 ## Why the field catalog is structured the way it is

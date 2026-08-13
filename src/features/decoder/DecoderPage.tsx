@@ -36,7 +36,11 @@ export default function DecoderPage() {
 
   return (
     <div className="page-narrow decoder-page">
-      <div className="section-label">01 — PASTE AN ATS MESSAGE</div>
+      <div className="section-label">Paste a message</div>
+      <p className="page-intro">
+        Drop in a raw ATS message and Wilco will identify the type, break down every field in plain language, and
+        flag anything that doesn't look right.
+      </p>
       <textarea
         className="decoder-input"
         rows={8}
@@ -68,7 +72,7 @@ export default function DecoderPage() {
             <>
               <BreakdownTable rows={breakdown} />
               <button type="button" className="btn-action primary" onClick={editInBuilder}>
-                EDIT IN BUILDER →
+                Edit in builder →
               </button>
             </>
           )}

@@ -1,6 +1,6 @@
 .builder-layout {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr 440px;
   gap: 0;
   align-items: start;
   padding: 0;
@@ -8,9 +8,26 @@
 }
 
 .left-panel {
-  padding: 24px 28px;
+  padding: 26px 32px;
   border-right: 1px solid var(--border);
   min-width: 0;
+}
+
+.builder-intro {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+#fields-area {
+  margin-top: 28px;
+}
+
+.field-step-hint {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: -6px 0 18px;
 }
 
 .builder-layout .right-panel {

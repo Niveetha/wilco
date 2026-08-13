@@ -7,10 +7,10 @@ interface Props {
 }
 
 const CATEGORY_LABEL: Record<string, string> = {
-  Emergency: 'EMERGENCY',
-  'Filed flight plan and associated update': 'MOVEMENT',
-  Coordination: 'CO-ORDINATION',
-  Supplementary: 'SUPPLEMENTARY',
+  Emergency: 'Emergency',
+  'Filed flight plan and associated update': 'Movement',
+  Coordination: 'Co-ordination',
+  Supplementary: 'Supplementary',
 };
 
 export default function MessageTypeGrid({ selected, onSelect }: Props) {
@@ -18,21 +18,25 @@ export default function MessageTypeGrid({ selected, onSelect }: Props) {
   return (
     <>
       {CATEGORY_ORDER.map((cat) => (
-        <div key={cat}>
+        <div key={cat} className="msg-category-block">
           <div className="msg-category">{CATEGORY_LABEL[cat]}</div>
           <div className="msg-type-grid">
             {byCategory[cat].map((def) => (
               <button
                 key={def.id}
                 type="button"
-                className={`msg-type-btn${selected === def.id ? ' active' : ''}${!def.implemented ? ' planned' : ''}`}
+                className={`msg-type-card${selected === def.id ? ' active' : ''}${!def.implemented ? ' planned' : ''}`}
                 disabled={!def.implemented}
-                title={def.implemented ? def.purpose : `${def.purpose} — planned for a later step, see docs/roadmap.md`}
                 onClick={() => def.implemented && onSelect(def.id)}
               >
-                <span className="code">{def.id}</span>
-                <span className="name">{def.name}</span>
-                {!def.implemented && <span className="soon">SOON</span>}
+                <span className="msg-type-code">{def.id}</span>
+                <span className="msg-type-copy">
+                  <span className="msg-type-name-row">
+                    <span className="msg-type-name">{def.name}</span>
+                    {!def.implemented && <span className="msg-type-soon">Soon</span>}
+                  </span>
+                  <span className="msg-type-purpose">{def.purpose}</span>
+                </span>
               </button>
             ))}
           </div>

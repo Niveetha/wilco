@@ -4,22 +4,11 @@
   gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 8px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--border);
 }
 .library-filters {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
-  margin-left: auto;
-}
-
-.library-hint {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  color: var(--muted);
-  margin: 16px 0;
-  line-height: 1.6;
 }
 
 .library-grid {
@@ -32,11 +21,13 @@
 .library-card {
   background: var(--panel);
   border: 1px solid var(--border);
+  border-radius: var(--radius);
   padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   animation: fadeIn 0.2s ease;
+  box-shadow: var(--shadow-card);
 }
 .library-card-header {
   display: flex;
@@ -46,24 +37,24 @@
 .library-card-name {
   font-family: var(--font-ui);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 13.5px;
   flex: 1;
 }
 .library-card-raw {
-  font-family: var(--font-data);
+  font-family: var(--font-mono);
   font-size: 12px;
   color: var(--accent);
   white-space: pre-wrap;
   word-break: break-word;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  border-left: 2px solid var(--border);
+  background: var(--input-bg);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
   max-height: 180px;
   overflow-y: auto;
 }
 .library-card-meaning {
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-ui);
+  font-size: 12.5px;
   color: var(--muted);
   line-height: 1.6;
 }
@@ -73,9 +64,8 @@
   gap: 10px;
 }
 .library-card-source {
-  font-family: var(--font-data);
-  font-size: 9px;
-  letter-spacing: 1px;
+  font-family: var(--font-ui);
+  font-size: 11px;
   color: var(--muted);
   flex: 1;
 }

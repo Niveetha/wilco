@@ -23,10 +23,10 @@ from the ICAO PANS-ATM Doc 4444 text, cited page-by-page in
 - Three purpose-built layouts depending on the message: a full field-by-
   field form for flight-plan-carrying messages (FPL), a compact
   flight-progress-strip layout for short administrative messages
-  (DEP/ARR/DLA/CNL), and a redlined amendment view for change messages
-  (CHG).
-- TRON-inspired dark theme by default, with a light "flight-plan paper"
-  alt theme.
+  (DEP/ARR/DLA/CNL), and a calm amendment view for change messages (CHG).
+- A "mission console" design — closer to modern glass-cockpit avionics and
+  ATC electronic flight strips than a neon dashboard — dark by default,
+  with a clean light theme as an alternative.
 - Installable PWA — add to home screen on mobile, install as a desktop app,
   works offline.
 

@@ -25,7 +25,7 @@ export default function StripForm({ def, values, onChange }: Props) {
               <div className="strip-segment">
                 <div className="strip-segment-label">
                   F{spec.number} {spec.name}
-                  {slot.optional ? <span className="strip-optional-tag">OPTIONAL — DIVERSION ONLY</span> : null}
+                  {slot.optional ? <span className="strip-optional-tag">Diversion only</span> : null}
                 </div>
                 <FieldEditor
                   fieldId={slot.fieldId}

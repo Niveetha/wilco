@@ -1,5 +1,46 @@
 # Decisions
 
+## Visual design: "mission console," not the reference mockup's look
+
+The reference HTML supplied at the start of the project was explicitly for
+color/functional direction only — the project owner did not want its
+visual design copied, and after seeing it built out said so plainly: it
+read as a dense, unfriendly spec sheet (tiny all-caps labels everywhere, a
+scanline overlay, a 23-button grid for Field 18 indicators with no visible
+description until hover, neon-on-black with no restraint). Step 1 had
+followed that mockup's visual language fairly closely; it was replaced
+wholesale with a calmer design closer to how real aviation/mission-control
+software actually looks — modern glass-cockpit avionics displays, ATC
+electronic flight strip systems, SpaceX Dragon's console UI — rather than
+a cyberpunk arcade cabinet:
+
+- One accent color (blue) for interaction; green/amber/red are reserved
+  strictly for status meaning (nominal/caution/error), not used
+  decoratively.
+- A humane sans-serif (IBM Plex Sans) for anything a person reads;
+  monospace (IBM Plex Mono) reserved for actual aviation data — codes,
+  coordinates, the message text itself — not blanket-applied to every
+  label like the mockup did.
+- Bigger type, more line-height, more breathing room; removed the
+  scanline overlay and the shouty small-caps-everywhere treatment.
+- The Field 18 "Other Information" editor — the single most spec-sheet-y
+  part of the mockup, a 23-button grid of bare 3-4 letter codes — was
+  rebuilt as a searchable "add a detail" pattern with one-tap chips for
+  the six most common indicators (PBN/DOF/REG/SEL/RMK/EET) and a
+  search-as-you-type dropdown with human-readable descriptions for the
+  rest.
+- The Field 22 amendment editor dropped the literal strikethrough-red
+  "diff" styling (reads as alarming/broken) for a calm field-picker +
+  new-value layout, and the field-number picker got a proper dropdown
+  with real field names instead of a bare numeric input.
+- Message type selection became readable cards with the purpose text
+  visible up front (not hidden behind a hover tooltip), instead of a
+  dense button grid.
+- The light theme changed from an "aged paper" aviation-form pastiche to
+  a clean, professional daytime ops-room palette — closer to how a real
+  glass-cockpit display looks in daylight mode than to a prop flight
+  plan form.
+
 ## Source document, and how we actually got it
 
 The plan was always to ground field/message grammar in the real ICAO Doc

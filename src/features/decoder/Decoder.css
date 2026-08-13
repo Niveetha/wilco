@@ -5,19 +5,24 @@
 }
 
 .decoder-input {
-  font-family: var(--font-data);
+  font-family: var(--font-mono);
   min-height: 160px;
   resize: vertical;
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  line-height: 1.7;
 }
 
 .decoder-result {
   background: var(--panel);
   border: 1px solid var(--border);
-  padding: 18px;
+  border-radius: var(--radius);
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
   animation: fadeIn 0.2s ease;
+  box-shadow: var(--shadow-card);
 }
 
 .decoder-result-header {

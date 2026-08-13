@@ -1,56 +1,52 @@
 .field-block {
   background: var(--panel);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--border);
-  padding: 16px;
+  border-radius: var(--radius);
+  padding: 18px;
   transition: border-color 0.2s;
   animation: fadeIn 0.2s ease;
-}
-.field-block.mandatory {
-  border-left-color: var(--mandatory);
-}
-.field-block.optional {
-  border-left-color: var(--optional);
+  box-shadow: var(--shadow-card);
 }
 
 .field-header {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   flex-wrap: wrap;
 }
 .field-num {
-  font-family: var(--font-data);
-  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 12px;
   color: var(--muted);
-  min-width: 28px;
+  background: var(--input-bg);
+  border-radius: 5px;
+  padding: 2px 7px;
 }
 .field-name {
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text);
-  letter-spacing: 0.5px;
   flex: 1;
 }
 
 .field-hint {
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-ui);
+  font-size: 13px;
   color: var(--muted);
-  margin-bottom: 10px;
-  padding: 6px 8px;
-  background: rgba(0, 0, 0, 0.15);
-  border-left: 2px solid var(--border);
+  margin-bottom: 14px;
   line-height: 1.6;
 }
 .field-hint .eg {
   color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
 }
 
 .fields-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }

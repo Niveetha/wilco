@@ -44,30 +44,30 @@ export default function OutputPanel({
   return (
     <div className="right-panel">
       <div className="output-header">
-        <span className="output-label">LIVE OUTPUT</span>
+        <span className="output-label">Your message</span>
         <div className="output-actions">
           {onSaveToLibrary && (
             <button type="button" className={`btn-action${saved ? ' copied' : ''}`} onClick={onSaveToLibrary} disabled={!message}>
-              {saved ? 'SAVED' : 'SAVE'}
+              {saved ? '✓ Saved' : 'Save'}
             </button>
           )}
-          <button type="button" className={`btn-action${copied ? ' copied' : ''}`} onClick={copy} disabled={!message}>
-            {copied ? 'COPIED' : 'COPY'}
+          <button type="button" className={`btn-action${copied ? ' copied' : ' primary'}`} onClick={copy} disabled={!message}>
+            {copied ? '✓ Copied' : 'Copy'}
           </button>
           <button type="button" className="btn-action" onClick={download} disabled={!message}>
-            DOWNLOAD
+            Download
           </button>
         </div>
       </div>
       <div className="output-body">
         {!message && (
           <div className="no-selection">
-            <span className="arrow">↖</span>
+            <span className="arrow">←</span>
             {emptyHint ?? (
               <>
-                SELECT A MESSAGE TYPE
+                Pick a message type on the left to get started.
                 <br />
-                TO BEGIN
+                Your message builds here as you fill in each field.
               </>
             )}
           </div>

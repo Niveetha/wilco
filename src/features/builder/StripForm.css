@@ -1,55 +1,51 @@
 .flight-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px 0;
+  gap: 18px 28px;
   background: var(--panel);
   border: 1px solid var(--border);
-  border-left: 4px solid var(--accent);
-  padding: 14px 16px;
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 18px 20px;
   align-items: stretch;
+  box-shadow: var(--shadow-card);
 }
 
 .strip-segment {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 0 14px 0 0;
+  gap: 7px;
   min-width: 0;
 }
 .strip-segment-label {
-  font-family: var(--font-data);
-  font-size: 8px;
-  letter-spacing: 1px;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: var(--muted);
   white-space: nowrap;
 }
 .strip-optional-tag {
   color: var(--warn);
   margin-left: 6px;
+  text-transform: none;
+  letter-spacing: 0;
 }
 .strip-divider {
-  color: var(--border);
-  font-size: 20px;
-  padding: 0 4px;
-  align-self: center;
-}
-.strip-segment .input-row {
-  align-items: flex-start;
+  display: none;
 }
 
 .strip-other-info {
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 @media (max-width: 640px) {
   .flight-strip {
     flex-direction: column;
+    gap: 16px;
   }
   .strip-segment {
     width: 100%;
-    padding: 0;
-  }
-  .strip-divider {
-    display: none;
   }
 }

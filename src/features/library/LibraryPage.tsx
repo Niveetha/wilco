@@ -56,10 +56,13 @@ export default function LibraryPage() {
 
   return (
     <div className="page library-page">
+      <div className="section-label">Message library</div>
+      <p className="page-intro">
+        Worked examples straight from the ICAO PANS-ATM document, for each message type that's live today — plus
+        anything you build and save yourself. Copy one message or grab the whole filtered set at once.
+      </p>
+
       <div className="library-header">
-        <div className="section-label" style={{ border: 'none', marginBottom: 0, paddingBottom: 0 }}>
-          MESSAGE LIBRARY
-        </div>
         <div className="library-filters">
           {types.map((t) => (
             <button
@@ -68,21 +71,14 @@ export default function LibraryPage() {
               className={`btn-action${filter === t ? ' primary' : ''}`}
               onClick={() => setFilter(t)}
             >
-              {t}
+              {t === 'ALL' ? 'All' : t}
             </button>
           ))}
         </div>
         <button type="button" className={`btn-action${copiedAll ? ' copied' : ''}`} onClick={copyAll} disabled={visible.length === 0}>
-          {copiedAll ? 'COPIED ALL' : `COPY ALL (${visible.length})`}
+          {copiedAll ? '✓ Copied all' : `Copy all (${visible.length})`}
         </button>
       </div>
-
-      {savedEntries.length === 0 && (
-        <p className="library-hint">
-          Examples below are the ICAO PANS-ATM document's own worked examples for each implemented message type,
-          plus the FPL you supplied. Anything you build and hit "SAVE" on in the Builder shows up here too.
-        </p>
-      )}
 
       <div className="library-grid">
         {visible.map((entry) => (

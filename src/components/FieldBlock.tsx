@@ -14,7 +14,7 @@ export default function FieldBlock({ spec, children }: Props) {
         <span className="field-num">F{spec.number}</span>
         <span className="field-name">{spec.name}</span>
         <span className={`badge ${spec.mandatory ? 'badge-mandatory' : 'badge-optional'}`}>
-          {spec.mandatory ? 'MANDATORY' : 'OPTIONAL'}
+          {spec.mandatory ? 'Required' : 'Optional'}
         </span>
       </div>
       <div className="field-hint">

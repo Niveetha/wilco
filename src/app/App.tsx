@@ -8,19 +8,37 @@ import AboutPage from './AboutPage';
 import './App.css';
 
 const TABS = [
-  { to: '/build', label: 'BUILD' },
-  { to: '/decode', label: 'DECODE' },
-  { to: '/library', label: 'LIBRARY' },
-  { to: '/about', label: 'ABOUT' },
+  { to: '/build', label: 'Build' },
+  { to: '/decode', label: 'Decode' },
+  { to: '/library', label: 'Library' },
+  { to: '/about', label: 'About' },
 ];
+
+function LogoMark() {
+  return (
+    <svg className="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="16" cy="16" r="14" stroke="var(--border-strong)" strokeWidth="1.4" />
+      <circle cx="16" cy="16" r="9.5" stroke="var(--border-strong)" strokeWidth="1" />
+      <path
+        d="M16 5 L18.4 14 L27 16 L18.4 18 L16 27 L13.6 18 L5 16 L13.6 14 Z"
+        fill="var(--accent)"
+        fillOpacity="0.85"
+      />
+      <circle cx="16" cy="16" r="2.1" fill="var(--positive)" />
+    </svg>
+  );
+}
 
 export default function App() {
   return (
     <>
       <header className="app-header">
         <div className="logo-block">
-          <span className="logo-title">WILCO</span>
-          <span className="logo-sub">ICAO DOC 4444 / PANS-ATM — APPENDIX 2 &amp; 3</span>
+          <LogoMark />
+          <div className="logo-text">
+            <span className="logo-title">Wilco</span>
+            <span className="logo-sub">ICAO Doc 4444 · ATS message builder</span>
+          </div>
         </div>
         <nav className="tab-nav">
           {TABS.map((t) => (
@@ -34,7 +52,9 @@ export default function App() {
           ))}
         </nav>
         <div className="header-right">
-          <span className="live-badge">● LIVE</span>
+          <span className="live-badge">
+            <span>Runs offline</span>
+          </span>
           <InstallPwaPrompt />
           <ThemeToggle />
         </div>

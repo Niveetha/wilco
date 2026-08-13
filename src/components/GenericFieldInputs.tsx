@@ -23,8 +23,8 @@ export default function GenericFieldInputs({ spec, value, onChange, compact }: P
         const raw = value?.[input.id] ?? '';
         const widthClass = WIDTH_CLASS[input.width ?? (input.kind === 'select' ? 'md' : 'sm')];
         return (
-          <div className={`input-group ${widthClass}`} key={input.id}>
-            {!compact && <label>{input.label}</label>}
+          <div className={`input-group ${widthClass}${compact ? ' input-group-compact' : ''}`} key={input.id}>
+            <label>{input.label}</label>
             {input.kind === 'select' ? (
               <select value={raw} onChange={(e) => onChange(input.id, e.target.value)}>
                 {input.options?.map((o) => (
@@ -39,7 +39,6 @@ export default function GenericFieldInputs({ spec, value, onChange, compact }: P
                 value={raw}
                 maxLength={input.maxLength}
                 placeholder={input.placeholder}
-                title={compact ? input.label : undefined}
                 onChange={(e) => {
                   const v = input.transform === 'upper' ? e.target.value.toUpperCase() : e.target.value;
                   onChange(input.id, v);

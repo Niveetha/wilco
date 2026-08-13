@@ -2,11 +2,12 @@
 
 ## Step 1 — Core movement messages (shipped)
 
-Full encode + decode + responsive TRON UI + PWA + docs for the six most
+Full encode + decode + a responsive mission-console UI + PWA + docs for the six most
 commonly used ATS message types.
 
 - [x] Vite + React + TypeScript scaffold, Vitest, GitHub Actions → GitHub Pages deploy
-- [x] TRON dark theme (default) + light "flight-plan paper" alt theme
+- [x] Mission-console dark theme (default) + a clean light ops-room alt theme
+- [x] Redesigned Field 18/22 editors and message picker for readability (see `decisions.md`)
 - [x] Core domain module: field catalog, message catalog, encoder, decoder, validators
 - [x] **FPL** — Filed Flight Plan (full form)
 - [x] **CHG** — Modification (diff/amendment form)

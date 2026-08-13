@@ -57,14 +57,16 @@ export default function BuilderPage() {
   return (
     <div className="page builder-layout">
       <div className="left-panel">
-        <div className="section-label">01 — SELECT MESSAGE TYPE</div>
+        <p className="builder-intro">Pick a message type, fill in the fields, get a ready-to-send ICAO message.</p>
+        <div className="section-label">Step 1 — Choose a message type</div>
         <MessageTypeGrid selected={type} onSelect={selectType} />
 
         {def && (
           <div id="fields-area">
             <div className="section-label">
-              02 — FIELDS · {type} — {def.name.toUpperCase()}
+              Step 2 — {def.name} ({type})
             </div>
+            <p className="field-step-hint">{def.purpose}</p>
             {def.displayMode === 'full' && <FullForm def={def} values={values} onChange={setFieldValue} />}
             {def.displayMode === 'strip' && <StripForm def={def} values={values} onChange={setFieldValue} />}
             {def.displayMode === 'diff' && <DiffForm def={def} values={values} onChange={setFieldValue} />}
